@@ -16,8 +16,8 @@ while True:
     gif = requests.get('http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=%s' % args['tag'])
 
     with open('giphy%s.gif' % random.randint(1, 3), 'wb') as f:
-      f.write(requests.get(gif.json()['data']['image_original_url']).content)
-      print 'downloaded', gif.json()['data']['image_original_url']
+      f.write(requests.get(gif.json()['data']['fixed_height_downsampled_url']).content)
+      print 'downloaded', gif.json()['data']['fixed_height_downsampled_url']
   except:
     time.sleep(10)
 
