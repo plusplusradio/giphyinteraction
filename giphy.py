@@ -4,7 +4,7 @@ from pprint import pprint
 import time
 import random
 
-api_key = 'dc6zaTOxFJmzC'
+api_key = 'dc6zaTOxFJmzC' # GitHub API key
 
 while True:
   gif = requests.get('http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=cat')
