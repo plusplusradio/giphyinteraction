@@ -13,7 +13,7 @@ api_key = 'dc6zaTOxFJmzC' # GitHub API key
 
 while True:
   try:
-    gif = requests.get('http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=%s' % args['tag'])
+    gif = requests.get('http://api.giphy.com/v1/gifs/random?api_key=%s&tag=%s' % (api_key, args['tag']))
 
     with open('giphy%s.gif' % random.randint(1, 3), 'wb') as f:
       f.write(requests.get(gif.json()['data']['fixed_height_downsampled_url']).content)
