@@ -19,6 +19,7 @@ while True:
       f.write(requests.get(gif.json()['data']['fixed_height_downsampled_url']).content)
       print 'downloaded', gif.json()['data']['fixed_height_downsampled_url']
   except:
+    print 'ERROR'
     time.sleep(10)
 
   time.sleep(10)
