@@ -22,6 +22,8 @@ def index():
 
       #print 'Downloaded', link
 
+  return ''
+
 @get('/') # Return a JSON object with the 'last modified' times of the GIFs that are served
 def index():
   files = {}
